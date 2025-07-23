@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fotoğraf Galerim</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: #121212;
+    color: #fff;
+  }
+
+  header {
+    text-align: center;
+    padding: 20px;
+    font-size: 2rem;
+    background: linear-gradient(90deg, #4A90E2, #6A5ACD);
+    color: white;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 10px;
+  }
+
+  .gallery a {
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 8px rgba(0,0,0,0.7);
+    background: #222;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+  }
+
+  .gallery a:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 8px 24px rgba(74,144,226,0.8);
+    border-color: #4A90E2;
+    z-index: 10;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    transition: filter 0.3s ease;
+  }
+
+  .gallery a:hover img {
+    filter: brightness(1.1);
+  }
+
+  .caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 6px 8px;
+    box-sizing: border-box;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    user-select: none;
+  }
+
+  footer {
+    text-align: center;
+    padding: 10px;
+    background: #1e1e1e;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  📸 Şık Fotoğraf Galerim
+</header>
+
+<div class="gallery">
+  <a href="images/foto1.png" class="glightbox" data-glightbox="title: Fotoğraf 1">
+    <img src="images/foto1.png" alt="Fotoğraf 1" />
+    <div class="caption">Fotoğraf 1</div>
+  </a>
+  <a href="images/foto2.png" class="glightbox" data-glightbox="title: Fotoğraf 2">
+    <img src="images/foto2.png" alt="Fotoğraf 2" />
+    <div class="caption">Fotoğraf 2</div>
+  </a>
+  <a href="images/foto3.png" class="glightbox" data-glightbox="title: Fotoğraf 3">
+    <img src="images/foto3.png" alt="Fotoğraf 3" />
+    <div class="caption">Fotoğraf 3</div>
+  </a>
+  <a href="images/foto4.png" class="glightbox" data-glightbox="title: Fotoğraf 4">
+    <img src="images/foto4.png" alt="Fotoğraf 4" />
+    <div class="caption">Fotoğraf 4</div>
+  </a>
+  <a href="images/foto5.png" class="glightbox" data-glightbox="title: Fotoğraf 5">
+    <img src="images/foto5.png" alt="Fotoğraf 5" />
+    <div class="caption">Fotoğraf 5</div>
+  </a>
+  <a href="images/foto6.png" class="glightbox" data-glightbox="title: Fotoğraf 6">
+    <img src="images/foto6.png" alt="Fotoğraf 6" />
+    <div class="caption">Fotoğraf 6</div>
+  </a>
+  <a href="images/foto7.png" class="glightbox" data-glightbox="title: Fotoğraf 7">
+    <img src="images/foto7.png" alt="Fotoğraf 7" />
+    <div class="caption">Fotoğraf 7</div>
+  </a>
+  <a href="images/foto8.png" class="glightbox" data-glightbox="title: Fotoğraf 8">
+    <img src="images/foto8.png" alt="Fotoğraf 8" />
+    <div class="caption">Fotoğraf 8</div>
+  </a>
+  <a href="images/foto9.png" class="glightbox" data-glightbox="title: Fotoğraf 9">
+    <img src="images/foto9.png" alt="Fotoğraf 9" />
+    <div class="caption">Fotoğraf 9</div>
+  </a>
+  <a href="images/foto10.png" class="glightbox" data-glightbox="title: Fotoğraf 10">
+    <img src="images/foto10.png" alt="Fotoğraf 10" />
+    <div class="caption">Fotoğraf 10</div>
+  </a>
+  <a href="images/foto11.png" class="glightbox" data-glightbox="title: Fotoğraf 11">
+    <img src="images/foto11.png" alt="Fotoğraf 11" />
+    <div class="caption">Fotoğraf 11</div>
+  </a>
+  <a href="images/foto12.png" class="glightbox" data-glightbox="title: Fotoğraf 12">
+    <img src="images/foto12.png" alt="Fotoğraf 12" />
+    <div class="caption">Fotoğraf 12</div>
+  </a>
+</div>
+
+<footer>
+  &copy; 2025 Benim Galerim
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  const lightbox = GLightbox({
+    selector: '.glightbox'
+  });
+</script>
+</body>
+</html>
